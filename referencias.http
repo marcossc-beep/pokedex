@@ -1,0 +1,14 @@
+GET http://localhost:6767/pokedex
+
+
+###
+
+POST http://localhost:6767/pokedex
+Content-Type: application/json
+
+{
+    "nome": "charizard",
+    "genero": "F",
+    "tipo": "Fogo/voador"
+}
+
