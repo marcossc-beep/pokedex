@@ -1,7 +1,9 @@
 import express from 'express'
+import cors from 'cors'
 
 const servidor = express()
 servidor.use(express.json())
+servidor.use(cors())
 
 const pokedex = []
 
@@ -16,4 +18,4 @@ servidor.post('/pokedex', (req, res) => {
     res.send('pokemon cadastrado!')
 })
 
-servidor.listen(6767)
+servidor.listen(3000, () => {console.log('deu bom')})
