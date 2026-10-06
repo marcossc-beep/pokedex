@@ -1,9 +1,9 @@
-GET http://localhost:6767/pokedex
+GET http://localhost:3000/pokedex
 
 
 ###
 
-POST http://localhost:6767/pokedex
+POST http://localhost:3000/pokedex
 Content-Type: application/json
 
 {
