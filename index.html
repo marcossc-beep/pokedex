@@ -1,0 +1,33 @@
+<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/006_f4.png">
+
+<input type="text" placeholder="img do pokemon" id="img">
+
+<button onclick="cadastrar()">
+    cadastrar
+</button>
+
+<button onclick="buscar()">
+    buscar
+</button>
+
+<script>
+     async function buscar () {
+        const pokedex = await fetch('http://localhost:3000/pokedex')
+    }   
+
+    async function cadastrar () {
+        const imagem = document.getElementById('img').value
+
+        const pokemon = {
+            imagem
+        }
+
+        const resposta = await fetch('http://localhost:3000/pokedex', {
+            method: 'POST',
+            body: JSON.stringify(pokemon),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    }
+</script>
